@@ -1,4 +1,4 @@
-# easybank
+# Manage
 
 ## Project setup
 ```
