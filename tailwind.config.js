@@ -26,7 +26,7 @@ module.exports = {
         'tablet': "url('~@/assets/images/bg-tablet-pattern.svg')",
         }),
         width: {
-          '2/7': '23%',
+          '6/7': '95%',
          
         }
     },
