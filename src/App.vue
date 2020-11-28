@@ -60,7 +60,12 @@
         <div
           class="flex flex-col lg:flex-row lg:justify-between lg:w-11/12 lg:mx-auto mt-20"
         >
-          <div class="lg:w-6/12">
+          <div
+            class="lg:w-6/12"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            data-aos-delay="500"
+          >
             <h1
               class="font-bold text-2xl w-8/12 mx-auto lg:w-9/12 md:text-4xl lg:pt-10 lg:text-left lg:ml-0"
             >
@@ -75,7 +80,12 @@
             </p>
           </div>
           <div class="mt-12 lg:w-5/12">
-            <div class="pb-10">
+            <div
+              class="pb-10"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+              data-aos-delay="500"
+            >
               <div
                 class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
               >
@@ -98,7 +108,12 @@
                 again.
               </p>
             </div>
-            <div class="pb-10">
+            <div
+              class="pb-10"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+              data-aos-delay="500"
+            >
               <div
                 class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
               >
@@ -120,7 +135,12 @@
                 the reports you need to keep key stakeholders informed.
               </p>
             </div>
-            <div class="pb-10">
+            <div
+              class="pb-10"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
+              data-aos-delay="500"
+            >
               <div
                 class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
               >
