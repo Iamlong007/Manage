@@ -62,7 +62,7 @@
         >
           <div
             class="lg:w-6/12"
-            data-aos="zoom-in"
+            data-aos="fade-in"
             data-aos-duration="2500"
             data-aos-delay="500"
           >
@@ -82,7 +82,7 @@
           <div class="mt-12 lg:w-5/12">
             <div
               class="pb-10"
-              data-aos="zoom-in"
+              data-aos="fade-in"
               data-aos-duration="2500"
               data-aos-delay="500"
             >
@@ -110,7 +110,7 @@
             </div>
             <div
               class="pb-10"
-              data-aos="zoom-in"
+              data-aos="fade-in"
               data-aos-duration="2500"
               data-aos-delay="500"
             >
@@ -137,7 +137,7 @@
             </div>
             <div
               class="pb-10"
-              data-aos="zoom-in"
+              data-aos="fade-in"
               data-aos-duration="2500"
               data-aos-delay="500"
             >
