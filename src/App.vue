@@ -18,7 +18,7 @@
               <a href="" class="md:px-3 hover:text-gray-500">Community</a>
             </div>
             <button
-              class="bg-primary px-6 py-3 text-xs text-white font-medium rounded-full shadow-md hover:bg-orange-600"
+              class="bg-primary px-6 py-3 text-xs focus:outline-none text-white font-medium rounded-full shadow-md hover:bg-orange-600"
             >
               Get Started
             </button>
@@ -49,7 +49,7 @@
                 task while while keeping the larger team goals in view
               </p>
               <button
-                class="bg-primary px-6 py-3 lg:mt-8 text-xs mx-auto mt-6 text-white font-medium rounded-full shadow-md hover:bg-orange-600"
+                class="bg-primary px-6 py-3 lg:mt-8 focus:outline-none text-xs mx-auto mt-6 text-white font-medium rounded-full shadow-md hover:bg-orange-600"
               >
                 Get Started
               </button>
@@ -57,35 +57,107 @@
           </div>
         </div>
         <!-- Second Frame -->
-        <div class="flex flex-col mt-20">
-          <div>
+        <div
+          class="flex flex-col lg:flex-row lg:justify-between lg:w-11/12 lg:mx-auto mt-20"
+        >
+          <div class="lg:w-6/12">
             <h1
-              class="font-bold text-2xl w-8/12 mx-auto lg:w-9/12 md:text-4xl lg:pt-10"
+              class="font-bold text-2xl w-8/12 mx-auto lg:w-9/12 md:text-4xl lg:pt-10 lg:text-left lg:ml-0"
             >
               What's different about manage?
             </h1>
             <p
-              class="font-regular text-gray-600 text-xs pt-3 lg:pt-6 w-11/12 mx-auto lg:ml-0 lg:text-left"
+              class="font-regular text-gray-600 text-xs pt-3 lg:pt-6 w-11/12 mx-auto lg:ml-0 lg:text-left lg:w-7/12"
             >
               Manage provides all the functionality your team needs, without the
               complexity. Our software is tailor-made for digital products
               teams.
             </p>
           </div>
-          <div class="mt-12">
-            <div
-              class="w-6/7 float-right flex flex-row justify-between bg-orange-100 rounded-l-3xl"
-            >
+          <div class="mt-12 lg:w-5/12">
+            <div class="pb-10">
               <div
-                class="bg-primary w-1/5 rounded-3xl text-center text-white text-sm px-2 py-2"
+                class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
               >
-                01
+                <div
+                  class="bg-primary w-1/5 lg:w-1/6 rounded-3xl text-center text-white text-sm px-2 py-2"
+                >
+                  01
+                </div>
+                <h1 class="font-bold text-sm w-9/12 pt-2 text-left">
+                  Track company-wide progress
+                </h1>
               </div>
-              <h1 class="font-bold text-sm w-9/12 pt-2 text-left">
-                Track company-wide progress
-              </h1>
+
+              <p
+                class="font-medium text-gray-600 text-xs pt-2 text-left leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+              >
+                See how your day-to-day tasks fit into the wider vision. Go from
+                tracking progress at the milestone level all the way done to the
+                smallest of details. Never lose sight of the bigger picture
+                again.
+              </p>
             </div>
-            <p></p>
+            <div class="pb-10">
+              <div
+                class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
+              >
+                <div
+                  class="bg-primary w-1/5 lg:w-1/6 rounded-3xl text-center text-white text-sm px-2 py-2"
+                >
+                  02
+                </div>
+                <h1 class="font-bold text-sm w-9/12 pt-2 text-left">
+                  Advanced built-in reports
+                </h1>
+              </div>
+
+              <p
+                class="font-medium text-gray-600 text-xs pt-2 text-left leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+              >
+                Set internal delivery estimates and track progress towards
+                company goals. Our customisable dashboard helps you build out
+                the reports you need to keep key stakeholders informed.
+              </p>
+            </div>
+            <div class="pb-10">
+              <div
+                class="w-12/12 flex flex-row justify-between bg-orange-100 lg:bg-white rounded-l-3xl"
+              >
+                <div
+                  class="bg-primary w-1/5 lg:w-1/6 rounded-3xl text-center text-white text-sm px-2 py-2"
+                >
+                  03
+                </div>
+                <h1 class="font-bold text-sm w-9/12 pt-2 text-left">
+                  Everything you need in one place
+                </h1>
+              </div>
+
+              <p
+                class="font-medium text-gray-600 text-xs pt-2 text-left leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+              >
+                Stop jumping from one service to another to communicate, store
+                files, track tasks, and share documents. Manage offers an
+                all-in-one team productivity solution.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Third Frame -->
+        <div class="mt-10">
+          <div class="w-11/12 mx-auto">
+            <h1
+              class="font-bold text-2xl w-10/12 mx-auto lg:w-9/12 md:text-4xl lg:pt-10 lg:text-left lg:ml-0"
+            >
+              What they've said
+            </h1>
+          </div>
+          <div class="mt-16 bg-gray-100 rounded w-5/6 mx-auto p-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+            voluptate architecto repudiandae cupiditate quia a saepe aut quidem
+            quisquam, blanditiis unde impedit sapiente, suscipit minima
+            quibusdam voluptatum optio nam nisi?
           </div>
         </div>
       </div>
@@ -156,8 +228,15 @@ export default {
 }
 @media (min-width: 1023px) {
   .mock {
-    background-position-y: -20rem;
-    background-position-x: 48rem;
+    background-position-y: -4rem;
+    background-position-x: 53rem;
+    background-size: 40%;
+  }
+  .mock-2 {
+    background-position: left;
+    background-position-y: 58rem;
+    background-position-x: -17rem;
+    background-size: 40%;
   }
 }
 </style>
