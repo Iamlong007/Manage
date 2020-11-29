@@ -165,7 +165,7 @@
           </div>
         </div>
         <!-- Third Frame -->
-        <div class="mt-10">
+        <div class="mt-10 w-11/12 mx-auto">
           <div class="w-11/12 mx-auto">
             <h1
               class="font-bold text-2xl w-10/12 mx-auto lg:w-9/12 md:text-4xl lg:pt-10 lg:text-left lg:ml-0"
@@ -173,11 +173,100 @@
               What they've said
             </h1>
           </div>
-          <div class="mt-16 bg-gray-100 rounded w-5/6 mx-auto p-5">
+          <!-- <div class="mt-16 bg-gray-100 rounded w-5/6 mx-auto p-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
             voluptate architecto repudiandae cupiditate quia a saepe aut quidem
             quisquam, blanditiis unde impedit sapiente, suscipit minima
             quibusdam voluptatum optio nam nisi?
+          </div> -->
+
+          <div class="w-12/12">
+            <VueSlickCarousel v-bind="settings">
+              <div>
+                <div class="mx-auto mt-16">
+                  <img
+                    src="./assets/images/avatar-anisha.png"
+                    alt=""
+                    class="h-16 mx-auto"
+                  />
+                </div>
+                <div class="mt-1 -mt-8 bg-gray-100 rounded w-12/12 mx-auto p-5">
+                  <h2 class="pt-8 text-base text-gray-800 font-bold">
+                    Anisha Li
+                  </h2>
+                  <p
+                    class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+                  >
+                    "Manage has supercharged our team's workflow. The ability to
+                    maintain visibility on larger milestones at all times keeps
+                    everyone motivated"
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="mx-auto mt-16">
+                  <img
+                    src="./assets/images/avatar-ali.png"
+                    alt=""
+                    class="h-16 mx-auto"
+                  />
+                </div>
+                <div class="mt-1 -mt-8 bg-gray-100 rounded w-12/12 mx-auto p-5">
+                  <h2 class="pt-8 text-base text-gray-800 font-bold">
+                    Alli Bravo
+                  </h2>
+                  <p
+                    class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+                  >
+                    "We have been able to cancel so many other subcriptions
+                    since using Manage. There is no more cross-channel confusion
+                    and everyone is much more focused"
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="mx-auto mt-16">
+                  <img
+                    src="./assets/images/avatar-richard.png"
+                    alt=""
+                    class="h-16 mx-auto"
+                  />
+                </div>
+                <div class="mt-1 -mt-8 bg-gray-100 rounded w-12/12 mx-auto p-5">
+                  <h2 class="pt-8 text-base text-gray-800 font-bold">
+                    Richard Watts
+                  </h2>
+                  <p
+                    class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+                  >
+                    "Manage allows us to provide structure and process. It keeps
+                    us organized and focused. I can't stop reccomending them to
+                    everyone I talk to!"
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div class="mx-auto mt-16">
+                  <img
+                    src="./assets/images/avatar-shanai.png"
+                    alt=""
+                    class="h-16 mx-auto"
+                  />
+                </div>
+                <div class="mt-1 -mt-8 bg-gray-100 rounded w-12/12 mx-auto p-5">
+                  <h2 class="pt-8 text-base text-gray-800 font-bold">
+                    Shanai Gough
+                  </h2>
+                  <p
+                    class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-11/12 lg:w-9/12 lg:ml-32 lg:pl-0 pl-2"
+                  >
+                    "Their software allows us to track, manage and collaborate
+                    on our projects from anywhere. It keeps the whole team
+                    in-sync without being intrusive"
+                  </p>
+                </div>
+              </div>
+            </VueSlickCarousel>
           </div>
         </div>
       </div>
@@ -186,12 +275,54 @@
 </template>
 
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
 export default {
+  name: "MyComponent",
+  components: { VueSlickCarousel },
+
   data() {
     return {
       nav: false,
       menu: require("./assets/images/icon-hamburger.svg"),
       close: require("./assets/images/icon-close.svg"),
+      settings: {
+        dots: true,
+        arrows: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      },
     };
   },
   computed: {
