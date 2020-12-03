@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="bg-white bg-tablet mock bg-no-repeat bg-contain">
     <div class="bg-tablet bg-right mock-2 bg-no-repeat bg-contain">
-      <div class="pb-64">
+      <div>
         <!-- Nav -->
         <div class="w-11/12 mx-auto flex flex-auto justify-between py-6">
           <div class="w-4/12">
@@ -176,7 +176,7 @@
         </div>
         <div class="w-12/12">
           <VueSlickCarousel v-bind="settings">
-            <div class="w-10/12 mx-auto lg:w-11/12">
+            <div class="w-10/12 mx-auto lg:w-11/12 md:pb-12">
               <div class="mx-auto mt-16 lg:w-11/12 lg:ml-0">
                 <img
                   src="./assets/images/avatar-anisha.png"
@@ -191,7 +191,7 @@
                   Anisha Li
                 </h2>
                 <p
-                  class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-12/12"
+                  class="font-medium text-gray-600 text-sm md:pb-10 lg:pb-4 pt-2 text-center pb-4 leading-loose w-12/12"
                 >
                   "Manage has supercharged our team's workflow. The ability to
                   maintain visibility on larger milestones at all times keeps
@@ -237,7 +237,7 @@
                   Richard Watts
                 </h2>
                 <p
-                  class="font-medium text-gray-600 text-sm pt-2 text-center pb-4 leading-loose w-12/12"
+                  class="font-medium text-gray-600 text-sm pt-2 text-center md:pb-10 lg:pb-4 pb-10 leading-loose w-12/12"
                 >
                   "Manage allows us to provide structure and process. It keeps
                   us organized and focused. I can't stop reccomending them to
@@ -269,6 +269,58 @@
               </div>
             </div>
           </VueSlickCarousel>
+        </div>
+        <div class="mt-12 mx-auto">
+          <button
+            class="bg-primary px-6 py-3 lg:mt-8 focus:outline-none text-xs mx-auto mt-6 text-white font-medium rounded-full shadow-md hover:bg-orange-600"
+          >
+            Get Started
+          </button>
+        </div>
+        <!-- Orange Footer -->
+        <div class="bg-primary pt-24 pb-32 mt-10 lg:mt-40 orange-footer">
+          <div
+            class="w-11/12 mx-auto flex flex-col lg:flex-row justify-between"
+          >
+            <div class="w-12/12 lg:w-6/12">
+              <h1 class="text-white text-4xl lg:text-left font-bold">
+                Simplify how your team works today.
+              </h1>
+            </div>
+            <div>
+              <button
+                class="bg-white px-8 py-3 lg:mt-8 focus:outline-none text-xs mx-auto mt-6 text-orange-600 primary font-semibold rounded-full shadow-md hover:bg-orange-600"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div class="bg-gray-900 pt-10 pb-32">
+          <div class="w-11/12 mx-auto">
+            <div class="flex flex-row mx-auto w-12/12">
+              <div>
+                <input
+                  type="text"
+                  class="rounded-full px-5 focus:outline-none py-3 text-xs w-12/12"
+                  placeholder="Updates in your inbox..."
+                />
+              </div>
+              <div class="ml-4">
+                <button
+                  class="bg-primary px-8 py-3 focus:outline-none text-xs mx-auto text-white font-medium rounded-full shadow-md hover:bg-orange-600"
+                >
+                  Go
+                </button>
+              </div>
+            </div>
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae eos
+            hic consequatur. Quod corporis fugit labore praesentium ea deserunt
+            voluptate saepe soluta quisquam consequatur consectetur facere
+            ipsum, optio voluptates omnis.
+          </div>
         </div>
       </div>
     </div>
@@ -363,6 +415,17 @@ export default {
 .border {
   border: 5px solid red;
 }
+.border2 {
+  border: 5px solid white;
+}
+.orange-footer {
+  background-image: url("~@/assets/images/bg-simplify-section-desktop.svg");
+  background-blend-mode: screen;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* background-position-x: -40rem;
+  background-position-y: -2rem; */
+}
 .fade-enter {
   opacity: 0;
 }
@@ -378,6 +441,9 @@ export default {
 @media (max-width: 1023px) {
   .deskNav {
     display: none;
+  }
+  .orange-footer {
+    background-image: none;
   }
 }
 @media (min-width: 1023px) {
