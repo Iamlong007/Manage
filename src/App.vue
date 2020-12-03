@@ -7,7 +7,13 @@
         : 'bg-white bg-tablet mock bg-no-repeat bg-contain'
     "
   >
-    <div class="bg-tablet bg-right mock-2 bg-no-repeat bg-contain">
+    <div
+      :class="
+        nav
+          ? 'activeBackground'
+          : 'bg-tablet bg-right mock-2 bg-no-repeat bg-contain'
+      "
+    >
       <div>
         <!-- Nav -->
         <div class="w-11/12 mx-auto flex flex-auto justify-between py-6">
