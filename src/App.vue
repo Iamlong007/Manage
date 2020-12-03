@@ -1,5 +1,12 @@
 <template>
-  <div id="app" class="bg-white bg-tablet mock bg-no-repeat bg-contain">
+  <div
+    id="app"
+    :class="
+      nav
+        ? 'activeBackground'
+        : 'bg-white bg-tablet mock bg-no-repeat bg-contain'
+    "
+  >
     <div class="bg-tablet bg-right mock-2 bg-no-repeat bg-contain">
       <div>
         <!-- Nav -->
@@ -490,8 +497,12 @@ export default {
 .border2 {
   border: 5px solid white;
 }
-.activeBakcground {
-  background-color: gray;
+.activeBackground {
+  background: linear-gradient(
+    180deg,
+    rgba(171, 171, 171, 0.47) 0%,
+    #000000 100%
+  );
 }
 .orange-footer {
   background-image: url("~@/assets/images/bg-simplify-section-desktop.svg");
