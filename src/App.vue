@@ -29,6 +29,18 @@
         </div>
         <!-- Header -->
         <div class="w-11/12 mx-auto lg:pt-8">
+          <transition name="fade">
+            <div
+              v-if="nav"
+              class="w-5/6 mt-20 z-20 absolute inset-0 md:w-2/6 mx-auto bg-white rounded-sm shadow-sm h-64 text-center font-medium text-gray-800 flex-row"
+            >
+              <p class="p-2 mt-4">Pricing</p>
+              <p class="p-2">Product</p>
+              <p class="p-2">About Us</p>
+              <p class="p-2">Careers</p>
+              <p class="p-2">Community</p>
+            </div>
+          </transition>
           <div class="flex flex-col lg:flex-row-reverse">
             <div
               class="mx-auto lg:w-5/12 lg:mr-0"
@@ -289,7 +301,7 @@
             </div>
             <div>
               <button
-                class="bg-white px-8 py-3 lg:mt-8 focus:outline-none text-xs mx-auto mt-6 text-orange-600 primary font-semibold rounded-full shadow-md hover:bg-orange-600"
+                class="bg-white px-8 py-3 lg:mt-8 focus:outline-none text-xs mx-auto mt-6 text-orange-600 primary font-semibold rounded-full shadow-md hover:bg-gray-200"
               >
                 Get Started
               </button>
@@ -298,28 +310,88 @@
         </div>
         <!-- Footer -->
         <div class="bg-gray-900 pt-10 pb-32">
-          <div class="w-11/12 mx-auto">
-            <div class="flex flex-row mx-auto w-12/12">
-              <div>
-                <input
-                  type="text"
-                  class="rounded-full px-5 focus:outline-none py-3 text-xs w-12/12"
-                  placeholder="Updates in your inbox..."
-                />
+          <div class="w-11/12 mx-auto lg:flex lg:flex-row-reverse">
+            <div
+              class="flex flex-row lg:flex lg:flex-col mx-auto w-12/12 lg:mt-20"
+            >
+              <div class="w-6/6 flex flex-row mx-auto">
+                <div>
+                  <input
+                    type="text"
+                    class="rounded-full px-5 focus:outline-none py-3 text-xs w-12/12"
+                    placeholder="Updates in your inbox..."
+                  />
+                </div>
+                <div class="ml-4">
+                  <button
+                    class="bg-primary px-8 py-3 focus:outline-none text-xs mx-auto text-white font-medium rounded-full shadow-md hover:bg-orange-600"
+                  >
+                    Go
+                  </button>
+                </div>
               </div>
-              <div class="ml-4">
-                <button
-                  class="bg-primary px-8 py-3 focus:outline-none text-xs mx-auto text-white font-medium rounded-full shadow-md hover:bg-orange-600"
-                >
-                  Go
-                </button>
+              <div class="copy">
+                <h2 class="pt-24 text-sm text-gray-600">
+                  Copyright 2020. All Rights Reserved.
+                </h2>
               </div>
             </div>
-
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae eos
-            hic consequatur. Quod corporis fugit labore praesentium ea deserunt
-            voluptate saepe soluta quisquam consequatur consectetur facere
-            ipsum, optio voluptates omnis.
+            <div
+              class="flex flex-row justify-between text-left text-sm w-10/12 lg:w-3/12 lg:mt-20 mx-auto text-gray-200 mt-8"
+            >
+              <div class="flex flex-col">
+                <a href="" class="pb-4">Home</a>
+                <a href="" class="pb-4">Pricing</a>
+                <a href="" class="pb-4">Product</a>
+                <a href="" class="pb-4">About Us</a>
+              </div>
+              <div class="flex flex-col">
+                <a href="" class="pb-4">Careers</a>
+                <a href="" class="pb-4">Community</a>
+                <a href="" class="pb-4">Privacy Policy</a>
+              </div>
+            </div>
+            <div
+              class="w-11/12 mx-auto mt-8 lg:w-2/12 lg:flex lg:flex-col-reverse"
+            >
+              <div class="flex flex-row justify-between lg:mt-24">
+                <img
+                  src="./assets/images/icon-facebook.svg"
+                  alt=""
+                  class="w-8"
+                />
+                <img
+                  src="./assets/images/icon-youtube.svg"
+                  alt=""
+                  class="w-8"
+                />
+                <img
+                  src="./assets/images/icon-twitter.svg"
+                  alt=""
+                  class="w-8"
+                />
+                <img
+                  src="./assets/images/icon-pinterest.svg"
+                  alt=""
+                  class="w-8"
+                />
+                <img
+                  src="./assets/images/icon-instagram.svg"
+                  alt=""
+                  class="w-8"
+                />
+              </div>
+              <div class="mt-8">
+                <img
+                  src="./assets/images/logo-white.png"
+                  alt=""
+                  class="h-6 mx-auto"
+                />
+              </div>
+            </div>
+            <h2 class="pt-16 text-sm text-gray-600 lg:hidden">
+              Copyright 2020. All Rights Reserved.
+            </h2>
           </div>
         </div>
       </div>
@@ -418,6 +490,9 @@ export default {
 .border2 {
   border: 5px solid white;
 }
+.activeBakcground {
+  background-color: gray;
+}
 .orange-footer {
   background-image: url("~@/assets/images/bg-simplify-section-desktop.svg");
   background-blend-mode: screen;
@@ -426,20 +501,36 @@ export default {
   /* background-position-x: -40rem;
   background-position-y: -2rem; */
 }
+.slide-fade.enter {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.slide-fade.enter-active,
+.slide-fade-leave-active {
+  transition: all 0.5 ease-out;
+}
+.slide-fade.leave {
+  transform: translate(-20px);
+  opacity: 0;
+}
+
 .fade-enter {
+  transform: translateY(-10rem);
   opacity: 0;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .fade-leave-to {
+  transform: translateY(-10rem);
   opacity: 0;
 }
 @media (max-width: 1023px) {
-  .deskNav {
+  .deskNav,
+  .copy {
     display: none;
   }
   .orange-footer {
